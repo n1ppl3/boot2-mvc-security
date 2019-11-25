@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 public class ClassWithSecuredMethods {
 
     @PreAuthorize("hasAuthority('SYS_ADMIN')")
-    public String getUsernameInLowerCase(){
+    public String getUsernameInLowerCase() {
         return getUsername().toLowerCase();
     }
 
