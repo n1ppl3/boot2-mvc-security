@@ -1,13 +1,11 @@
 package ru.pipan.spring.boot2;
 
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
 import org.springframework.security.test.context.support.WithMockUser;
-import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import ru.pipan.spring.boot2.controller.SecuredController;
@@ -19,9 +17,8 @@ import static ru.pipan.spring.boot2.config.SecurityConstants.MY_ROLE_MANAGER;
 import static ru.pipan.spring.boot2.config.SecurityConstants.USER_NAME_MANAGER;
 
 @AutoConfigureMockMvc
-@ExtendWith(SpringExtension.class)
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-class MvcSecurityApplicationTests {
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.MOCK)
+class MvcSecurityApplicationTest1 {
 
 	@Autowired
 	private MockMvc mockMvc;
